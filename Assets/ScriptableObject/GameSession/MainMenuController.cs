@@ -14,11 +14,7 @@ public class MainMenuController : MonoBehaviour
 	public GameObject PlayersPanel;
 	public GameObject SettingsPanel;
 
-	public string SavedSettingsPath {
-		get {
-			return System.IO.Path.Combine(Application.persistentDataPath, "tanks-settings.json");
-		}
-	}
+	public string SavedSettingsPath => System.IO.Path.Combine(Application.persistentDataPath, "tanks-settings.json");
 
 	void Start () {
 		if (System.IO.File.Exists(SavedSettingsPath))
